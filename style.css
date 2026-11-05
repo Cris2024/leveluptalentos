@@ -42,13 +42,16 @@ main{margin-left:var(--menu);transition:margin-left .28s ease}.menu.collapsed~ma
 }
 .hero.hero-cover picture{display:block;width:100%;height:auto}
 .hero.hero-cover picture img.cover-image{display:block;width:100%;height:auto;max-width:none;object-fit:contain}
-/* Oculta a barra de rolagem do menu, mas mantém a rolagem funcionando */
-.menu {
-  overflow-y: auto;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+/* Oculta a barra de rolagem do menu lateral */
+.menu,
+.menu * {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
 }
 
-.menu::-webkit-scrollbar {
-  display: none;
+.menu::-webkit-scrollbar,
+.menu *::-webkit-scrollbar {
+  width: 0 !important;
+  height: 0 !important;
+  display: none !important;
 }
