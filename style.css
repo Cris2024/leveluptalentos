@@ -55,3 +55,48 @@ main{margin-left:var(--menu);transition:margin-left .28s ease}.menu.collapsed~ma
   height: 0 !important;
   display: none !important;
 }
+/* Tablets e telas intermediárias */
+@media (max-width: 900px) {
+  :root {
+    --menu: 64px;
+  }
+
+  .menu {
+    width: 64px;
+    padding: 15px 10px;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .menu::-webkit-scrollbar {
+    display: none;
+  }
+
+  .menu .nav-text,
+  .menu .brand-text {
+    display: none;
+  }
+
+  main {
+    margin-left: 64px;
+    width: calc(100% - 64px);
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding: 40px 24px;
+  }
+
+  .hero-copy {
+    max-width: 100%;
+  }
+
+  .hero-cover,
+  .cover-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+}
