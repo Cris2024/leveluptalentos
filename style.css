@@ -42,3 +42,13 @@ main{margin-left:var(--menu);transition:margin-left .28s ease}.menu.collapsed~ma
 }
 .hero.hero-cover picture{display:block;width:100%;height:auto}
 .hero.hero-cover picture img.cover-image{display:block;width:100%;height:auto;max-width:none;object-fit:contain}
+/* Oculta a barra de rolagem do menu, mas mantém a rolagem funcionando */
+.menu {
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.menu::-webkit-scrollbar {
+  display: none;
+}
